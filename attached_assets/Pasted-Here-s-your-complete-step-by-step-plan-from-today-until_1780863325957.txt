@@ -1,0 +1,46 @@
+Here's your complete step-by-step plan from today until first income:
+
+Step 1 — Push to GitHub (Today)
+git remote add origin https://github.com/YOUR_USERNAME/ph-calculators.git
+git add .
+git commit -m "Launch PH Calculators"
+git push -u origin main
+
+→ Create a free account at github.com if you don't have one.
+
+Step 2 — Deploy to Vercel (Today, 10 minutes)
+Go to vercel.com → sign up free with GitHub
+Click "Add New Project" → import your repo
+Set build settings (exact instructions in DEPLOYMENT.md in your project)
+Click Deploy → your site is live at yoursite.vercel.app
+Step 3 — Register with Google (Week 1)
+Google Search Console → search-console.google.com → add your site → submit sitemap
+Google Analytics → analytics.google.com → add tracking code to your site
+Both are free. This tells Google your site exists and lets you track visitors.
+Step 4 — Build content (Weeks 1–5)
+Every calculator page needs 300+ words of text around it to pass AdSense. You already have this. Now add:
+
+2–3 blog posts explaining PH finance topics (e.g. "How to compute your SSS contribution in 2025")
+More calculators: 13th month pay, Pag-IBIG, overtime pay (I can build these)
+Step 5 — Apply for AdSense (Week 6–8)
+Go to adsense.google.com → apply with your Vercel domain
+You need: 15+ pages of quality content, About/Contact/Privacy pages (you already have these), at least a few weeks of site history
+Review takes 1–2 weeks
+Once approved: paste your AdSense code into the site (I'll do this for you)
+Step 6 — Post in Facebook groups (Ongoing from Week 1)
+Don't wait for Google. Share your calculators now:
+
+Search Facebook for: HR Philippines, OFW Family Network, Payroll Philippines, BIR Tax Help
+Post something like: "Free SSS Contribution Calculator — updated for 2025 rates: [your link]"
+Do this once a week in different groups
+Step 7 — First money (Month 4–9)
+Month	What's happening
+1–2	Building content, posting on Facebook
+3–4	AdSense approved, ads running, small income
+6	Google starts ranking your pages
+9–12	₱5,000–₱20,000/month if consistent
+What I can still build for you:
+Sitemap.xml + robots.txt (helps Google find pages faster)
+3 more calculators: 13th month, Pag-IBIG, overtime
+AdSense ad placement (once you get approved)
+Affiliate banners next to calculators

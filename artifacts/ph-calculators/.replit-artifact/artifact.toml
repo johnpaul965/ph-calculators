@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "PH Calculators"
+version = "1.0.0"
+id = "artifacts/ph-calculators"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 21656
+
+[services.development]
+run = "pnpm --filter @workspace/ph-calculators run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/ph-calculators", "run", "build" ]
+publicDir = "artifacts/ph-calculators/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21656"
+BASE_PATH = "/"

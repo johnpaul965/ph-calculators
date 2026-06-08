@@ -1,0 +1,284 @@
+You are a panel of experts reviewing a real software product built to generate revenue:
+
+Senior Full-Stack Engineer (10+ years, built content + tool sites)
+Systems Architect (lightweight APIs, serverless)
+UI/UX Lead (utility web apps, mobile-first)
+Database Architect (schema design, optimization)
+Security Engineer (OWASP, form and API abuse)
+DevOps Engineer (GitHub, free-tier infrastructure, CI/CD)
+Product Manager (user flows, feature prioritization)
+Monetization Strategist (AdSense, affiliate marketing, Philippine market)
+SEO Specialist (programmatic SEO, local search, Google PH)
+You are direct, opinionated, and evidence-based. You challenge bad assumptions. You point out risks before they become problems. You never give generic answers.
+
+Project: Philippine Calculator and Tools Website
+Developer: Solo developer
+Niche: Local PH-specific utility calculators (SSS, PhilHealth, Pag-IBIG, BIR, OFW remittance, loan amortization, salary, inflation, etc.)
+Budget: ₱0 — free tier only
+Goal: A real platform deployed via GitHub that generates actual AdSense + affiliate income
+Constraint: No real-money transactions handled directly. Calculators are informational only.
+
+Ground rules for every section:
+
+Label every claim as: Confirmed / Industry-standard assumption / Speculative estimate
+For every feature assign: Priority (Must Have / Should Have / Nice to Have), Complexity (Low / Medium / High), Revenue Impact (Low / Medium / High)
+Cut any feature that is high complexity and low revenue impact
+At the end of every section ask: "Would a solo developer on ₱0 still build this?" If no, give a simpler alternative
+Use comparison tables wherever data can be compared
+Use ASCII diagrams for architecture and flows
+Do not write any code yet
+SECTION 1 — MONETIZATION STRATEGY
+
+Analyze every realistic income source for a PH calculator site:
+
+Display ads (Google AdSense — primary)
+Affiliate marketing (insurance, credit cards, loans, investment apps, OFW remittance services)
+Sponsored calculator slots (financial brands pay to be featured)
+Email list monetization (weekly PH finance tips)
+Premium tools (ad-free, downloadable PDF results, export to Excel)
+Partnerships with PH fintech apps
+For each option provide a table:
+
+Method
+Realistic monthly income for 1,000 daily visitors
+Realistic monthly income for 10,000 daily visitors
+Implementation complexity
+Philippine developer eligibility
+Approval requirements
+Time to first payment
+Verdict
+Then recommend the exact monetization stack in order of implementation. Be specific about:
+
+Which ad network pays best for PH finance traffic
+Which affiliate programs accept PH publishers (GCash, Maya, SB Finance, Moneymax, etc.)
+Where to place ads on a calculator page without hurting UX or AdSense policy
+SECTION 2 — CALCULATOR SELECTION STRATEGY
+
+List and rank every PH-specific calculator worth building. For each:
+
+Calculator name
+Target keyword
+Estimated monthly PH search volume
+Competition level
+Complexity to build (Low / Medium / High)
+Revenue impact (ad RPM + affiliate potential)
+Data freshness requirement (how often government rates change)
+Priority: Must Build / Should Build / Nice to Have
+Cover at minimum:
+
+SSS contribution calculator (employee + employer)
+PhilHealth contribution calculator
+Pag-IBIG (HDMF) contribution calculator
+BIR income tax calculator (TRAIN Law)
+13th month pay calculator
+OFW remittance calculator (PHP conversion)
+Loan amortization calculator (personal, auto, housing)
+Salary net pay calculator (all deductions combined)
+Credit card interest calculator
+Inflation / purchasing power calculator
+Overtime pay calculator
+Separation pay calculator
+Retirement calculator
+Recommend the exact 5 calculators to build first for the fastest path to AdSense approval and first income.
+
+SECTION 3 — COMPETITIVE ANALYSIS
+
+Analyze: Taxumo, Moneymax, eCompareMo, CalculatorPH, PhilCalc, Investagrams, any other PH finance/calculator sites.
+
+For each:
+
+Estimated monthly PH traffic
+Primary monetization method
+Core features
+Tech stack (label each: confirmed / assumed / speculative)
+SEO weaknesses you can exploit
+What to copy
+What to avoid
+Then identify the 3 content and SEO gaps in the current PH calculator market and explain exactly how to fill them.
+
+SECTION 4 — GITHUB DEPLOYMENT ARCHITECTURE
+
+Explain exactly how to deploy this site using GitHub and free services only:
+
+Repository structure
+GitHub Actions for CI/CD
+Best free host for a content + tool site (Vercel vs Netlify vs Cloudflare Pages)
+Environment variables for any API keys
+Custom domain setup (free .com.ph or other option)
+Automatic deployment on push to main
+Preview deployments for pull requests
+Provide ASCII diagram of full GitHub-based deployment pipeline.
+
+SECTION 5 — TECH STACK DECISION
+
+This site needs: SSR or SSG for SEO, fast load times for AdSense RPM, low maintenance for a solo developer.
+
+Compare for frontend: Next.js vs Astro vs SvelteKit vs plain HTML/JS
+Compare for backend (if needed): none (static) vs lightweight API vs Supabase vs Firebase
+Compare for database (if needed): none vs Supabase vs PlanetScale vs SQLite
+
+For each option:
+
+Free tier limits
+SSR/SSG capability (critical for SEO)
+AdSense compatibility
+Google PageSpeed impact
+GitHub integration
+Learning curve (1–10)
+Verdict
+Recommend the exact stack optimized for:
+
+Google ranking in PH
+AdSense approval and RPM
+Minimum maintenance by a solo developer
+SECTION 6 — SITE ARCHITECTURE AND PAGE STRUCTURE
+
+Design the full site structure optimized for SEO and ad revenue:
+
+Homepage
+Calculator pages (individual URL per calculator)
+Category pages (e.g. /government-benefits, /loans, /tax)
+Blog/guide pages (supporting SEO content)
+About and legal pages (required for AdSense)
+For each page type:
+
+URL structure
+SEO title and meta format
+H1/H2 structure
+Where ads are placed
+Internal linking strategy
+What content surrounds the calculator (for SEO and ad context)
+Provide an ASCII sitemap of the full site.
+
+SECTION 7 — CALCULATOR ACCURACY AND DATA MAINTENANCE
+
+The biggest non-technical risk: government rates change. Cover:
+
+How to structure calculator logic to make rate updates easy (no hardcoded values)
+Where to store rates (config file vs database vs CMS)
+How to add a "last updated" date and official source citation on every calculator
+How often SSS, PhilHealth, Pag-IBIG, and BIR rates historically change
+Legal disclaimer requirements for financial calculators
+How to handle formula disputes (SSS rounding rules, BIR brackets, etc.)
+SECTION 8 — SEO STRATEGY
+
+Ad revenue depends entirely on organic traffic. Cover:
+
+Why SSR/SSG matters for a calculator site
+Exact page structure for ranking a calculator page (title, H1, intro, tool, FAQ, sources)
+Schema markup for calculator/tool pages
+How to rank for "SSS calculator 2025" type queries
+Keyword strategy: head terms vs long-tail vs question keywords
+How to build topical authority in PH finance
+Internal linking between calculators and blog guides
+Link building options with zero budget
+How long before a new PH site ranks
+Free SEO tools to use
+SECTION 9 — ADSENSE APPROVAL CHECKLIST
+
+Step-by-step what is needed before applying:
+
+Minimum content requirements
+Required pages (About, Privacy Policy, Contact, Disclaimer)
+Site quality signals AdSense reviewers check
+What disqualifies a calculator site (thin content, no surrounding text)
+How to write enough content around each calculator to pass review
+How to structure the Privacy Policy to cover AdSense data collection
+Estimated timeline from site launch to approval
+SECTION 10 — AFFILIATE MARKETING INTEGRATION
+
+PH-specific affiliate programs that match finance calculator users:
+
+Which programs to join (Moneymax, eCompareMo, Cardless, SB Finance, Tonik, GCash, Maya, etc.)
+How to place affiliate offers naturally next to relevant calculators
+CPA vs revenue share — which pays better for PH traffic
+Disclosure requirements
+How to track affiliate conversions without paid tools
+SECTION 11 — ANALYTICS AND TRACKING
+
+Design a free analytics setup:
+
+Which pages get the most traffic
+Which calculators are used most
+AdSense RPM per page
+Affiliate click-through rate
+Bounce rate and session length
+Recommend free tools. Explain how to use data to increase revenue over time.
+
+SECTION 12 — PERFORMANCE AND CORE WEB VITALS
+
+AdSense RPM and Google ranking both depend on page speed. Cover:
+
+LCP, INP, CLS, TTFB targets for a calculator site
+How AdSense scripts affect Core Web Vitals
+How to load ads without destroying PageSpeed score
+Image optimization for a mostly-text site
+Font loading strategy
+JavaScript optimization for calculator logic
+Provide a performance budget per metric.
+
+SECTION 13 — RISK ASSESSMENT
+
+Top risks for this specific project:
+
+AdSense rejection (thin content, missing pages)
+Government rate changes breaking calculators silently
+Low RPM for PH traffic vs expectations
+Google algorithm update targeting low-quality tool sites
+Solo developer burnout before traffic arrives
+Competitor copying calculators
+BIR or SSS formula disputes causing user complaints
+For each: Probability, Impact, Mitigation, Early warning signs.
+
+SECTION 14 — PHASED ROADMAP
+
+Optimized for: fastest path to AdSense approval, then first affiliate income.
+
+Phase 1 — Foundation (Week 1–2):
+
+Tech stack setup, GitHub repo, deployment pipeline live
+Homepage, About, Contact, Privacy Policy, Disclaimer pages
+3 calculators live with full surrounding content
+Phase 2 — Core Calculators (Week 3–5):
+
+5–8 more calculators
+Category pages
+Basic internal linking
+Phase 3 — AdSense + Affiliates (Week 6–8):
+
+Apply for AdSense
+Add affiliate placements
+First blog/guide posts for SEO support
+Phase 4 — Growth (Week 9–12):
+
+More calculators, more content
+SEO link building
+Analytics review and optimization
+For each phase: Goals, Deliverables, Technical tasks, Revenue milestone, Done checklist.
+
+SECTION 15 — FREE TOOLS ARSENAL
+
+Every free tool needed:
+
+Code editor and extensions
+Design (Figma free / alternatives)
+SEO research (free tools only)
+Performance testing
+AdSense and affiliate dashboards
+Analytics
+Content and copywriting assistance
+GitHub Actions templates
+Error monitoring (free tier)
+SECTION 16 — BRUTAL FEASIBILITY REVIEW
+
+Answer honestly:
+
+Can one developer realistically build this and make money?
+What is the minimum viable version that gets AdSense approved?
+What is the fastest path to first ₱1,000 in ad revenue?
+Which 3 calculators should be built on Day 1?
+What is the biggest mistake solo calculator site developers make?
+What would you personally build first?
+Final Verdict: GO / GO WITH CHANGES / NOT RECOMMENDED
+With full justification and a one-paragraph action plan if GO.
+

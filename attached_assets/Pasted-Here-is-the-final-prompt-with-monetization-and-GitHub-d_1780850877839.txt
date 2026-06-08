@@ -1,0 +1,336 @@
+Here is the final prompt with monetization and GitHub deployment built in:
+
+---
+
+You are a panel of experts reviewing a real software product built to generate revenue:
+
+- Senior Full-Stack Engineer (10+ years, built monetized gaming platforms)
+- Systems Architect (distributed systems, API design)
+- UI/UX Lead (gaming and consumer web products)
+- Database Architect (schema design, optimization)
+- Security Engineer (OWASP, authentication systems)
+- DevOps Engineer (GitHub, free-tier infrastructure, CI/CD)
+- Product Manager (user flows, feature prioritization)
+- Monetization Strategist (ad networks, freemium, retention)
+
+You are direct, opinionated, and evidence-based. You challenge bad assumptions. You point out risks before they become problems. You never give generic answers.
+
+**Project:** Multi-Game Aggregator Platform
+**Developer:** Solo developer
+**Games:** Browser-based HTML5, AI-generated
+**Budget:** ₱0 — free tier only
+**Goal:** A real platform deployed via GitHub that generates actual income
+**Constraint:** No gambling, no illegal content, no real-money transactions
+
+**Ground rules for every section:**
+- Label every claim as: Confirmed / Industry-standard assumption / Speculative estimate
+- For every feature assign: Priority (Must Have / Should Have / Nice to Have), Complexity (Low / Medium / High), Revenue Impact (Low / Medium / High)
+- Cut any feature that is high complexity and low revenue impact
+- At the end of every section ask: "Would a solo developer on ₱0 still build this?" If no, give a simpler alternative
+- If something is complex, always show the simplest working alternative
+- Use comparison tables wherever data can be compared
+- Use ASCII diagrams for architecture and flows
+- Do not write any code yet
+
+---
+
+**SECTION 1 — MONETIZATION STRATEGY**
+
+This is the most important section. Recommend the best monetization model for a free browser game aggregator built by a solo developer.
+
+Analyze every realistic option:
+
+- Display ads (Google AdSense, Media.net, Ezoic, Monumetric)
+- Rewarded ads (watch ad to earn virtual tokens)
+- Interstitial ads (between games)
+- Affiliate marketing (game-related products)
+- Premium membership (ad-free experience, exclusive games)
+- Virtual token purchases (buy tokens with real money via PayMongo/GCash)
+- Sponsored game slots (pay to feature a game)
+- Game developer revenue share (host indie games, split ad revenue)
+
+For each option provide a table:
+- Method
+- Realistic monthly income estimate for 1,000 daily visitors
+- Realistic monthly income estimate for 10,000 daily visitors
+- Implementation complexity (Low / Medium / High)
+- Approval requirements (age of site, traffic minimums)
+- Philippine developer eligibility
+- Time to first payment
+- Verdict
+
+Then recommend the exact monetization stack — which methods to combine, in what order to implement them, and why. Be specific about which ad network pays best for Philippine-based traffic.
+
+---
+
+**SECTION 2 — PLATFORM NAMING**
+
+Suggest 10 names for a monetizable multi-game aggregator. For each:
+- Name
+- Meaning and relevance
+- Domain availability likelihood (.com, .io, .gg)
+- Memorability (1–10)
+- Professionalism (1–10)
+- SEO potential (1–10)
+- Ad network approval likelihood (some reject low-quality-sounding domains)
+
+Recommend the single best name with full justification.
+
+---
+
+**SECTION 3 — COMPETITIVE ANALYSIS**
+
+Analyze: Poki, CrazyGames, Miniclip, Kongregate, Roblox, Armor Games, GameDistribution.
+
+For each provide a table:
+- Estimated monthly active users
+- Primary revenue model
+- Estimated annual revenue (label as confirmed / speculative)
+- Core architecture model
+- Tech stack (label each as confirmed / assumed / speculative)
+- Game embedding method
+- What makes them money
+- Weaknesses you can exploit
+- What to copy
+- What to avoid
+
+After the table identify the 5 revenue patterns shared by profitable aggregators and explain exactly how to replicate each on a ₱0 budget.
+
+---
+
+**SECTION 4 — GITHUB DEPLOYMENT ARCHITECTURE**
+
+Explain exactly how to deploy this platform using GitHub and free services only.
+
+Cover:
+- GitHub repository structure (monorepo vs separate repos)
+- GitHub Actions for CI/CD
+- GitHub Pages limitations and whether it works for this project
+- Best free hosting that integrates with GitHub (Vercel, Netlify, Railway, Render, Fly.io)
+- How frontend and backend deploy separately from one repo
+- Environment variables and secrets management via GitHub
+- Custom domain setup on a free hosting tier
+- Automatic deployment on push to main branch
+- Preview deployments for pull requests
+
+Provide an ASCII diagram of the full GitHub-based deployment pipeline.
+
+---
+
+**SECTION 5 — TECH STACK DECISION**
+
+Compare all viable options for a solo developer on zero budget who needs to make money.
+
+Frontend — React vs Next.js vs SvelteKit vs plain HTML/JS
+Backend — Node.js/Express vs Django vs Firebase vs Supabase
+Database — PostgreSQL vs MongoDB vs Firestore vs PlanetScale vs Supabase
+Hosting — Vercel vs Netlify vs Railway vs Render vs Fly.io
+
+For every option produce a comparison table:
+- Free tier limits
+- Sleep/cold start behavior
+- AdSense compatibility (some hosts block ad scripts)
+- SEO capability (SSR vs CSR matters for ad revenue)
+- GitHub integration quality
+- Learning curve (1–10)
+- Scalability ceiling
+- Verdict
+
+Recommend the exact full stack optimized for SEO, ad revenue, and GitHub deployment. Defend every choice.
+
+---
+
+**SECTION 6 — ARCHITECTURE DECISION**
+
+Compare Monolith vs Modular Monolith vs Microservices vs Serverless.
+
+Recommend the best architecture at three stages:
+- Stage 1: 0–100 users
+- Stage 2: 100–10,000 users
+- Stage 3: 10,000–100,000 users
+
+Explain what changes at each stage, what it costs, and when to upgrade.
+
+Describe the full system:
+- Frontend layer
+- API layer
+- Auth service
+- Game service
+- Virtual wallet service
+- Leaderboard service
+- Ad integration layer
+- Analytics layer
+- Database layer
+- Caching layer
+- CDN strategy
+
+For every component: purpose, inputs, outputs, failure behavior, scaling strategy.
+
+---
+
+**SECTION 7 — GAME EMBEDDING ARCHITECTURE**
+
+The most critical technical section. Explain:
+- iframe vs JS SDK vs WebComponent — pros, cons, recommendation
+- How the platform communicates with embedded games (postMessage, WebSockets, REST)
+- Full game session lifecycle: start → play → score → end → reward → ad display
+- Where ads are injected in the game flow for maximum revenue without destroying UX
+- How to prevent score manipulation and cheating
+- How to sandbox games from platform data
+- ASCII diagram of full game integration flow including ad triggers
+- Sample JSON payloads: session start, score submit, session end, wallet update, ad event
+
+---
+
+**SECTION 8 — DATABASE DESIGN**
+
+Full production-ready schema.
+
+Tables: Users, Wallets, Transactions, Games, GameSessions, Leaderboard, Achievements, AchievementProgress, ActivityLogs, Notifications, Roles, Permissions, AuditLogs, AdEvents, RevenueLog
+
+For every table:
+- All fields with exact data types
+- Primary keys, foreign keys, indexes
+- Constraints and defaults
+- Relationships
+- Purpose of every field
+
+Then provide:
+- Full ERD description
+- Normalization analysis (1NF, 2NF, 3NF)
+- Indexing strategy
+- Query optimization for the 5 most common queries
+- Bottlenecks and solutions
+
+---
+
+**SECTION 9 — SECURITY AUDIT**
+
+Pre-launch security review. For each threat: description, attack scenario, mitigation, implementation note.
+
+Cover:
+- Authentication (JWT, refresh tokens, storage, expiry)
+- Authorization (RBAC, privilege escalation)
+- Password security (hashing, salting)
+- Rate limiting (per IP, per user, per endpoint)
+- SQL injection
+- XSS — stored, reflected, DOM-based
+- CSRF
+- CORS configuration
+- Game session tampering — score injection, replay attacks
+- Virtual wallet abuse — double spending, race conditions
+- Ad fraud prevention (click farms, impression stuffing)
+- OWASP Top 10 2023 — each with specific mitigation for this platform
+
+---
+
+**SECTION 10 — SEO STRATEGY**
+
+Ad revenue depends on traffic. Traffic depends on SEO. Cover:
+- Why SSR matters for a game aggregator
+- Page structure for maximum SEO (game pages, category pages, landing page)
+- Meta tags, Open Graph, structured data for games
+- Sitemap and robots.txt strategy
+- Page speed as an SEO factor
+- Keyword strategy for game aggregator traffic
+- Link building for a new gaming site
+- How long before Google indexes and ranks new pages
+- Free SEO tools to use
+
+---
+
+**SECTION 11 — ANALYTICS AND TELEMETRY**
+
+Design a free analytics system to track revenue and user behavior:
+- DAU, MAU, session length, retention
+- Revenue per user, revenue per game, revenue per page
+- Ad impression rate, click-through rate, fill rate
+- Game popularity and drop-off points
+- Funnel: landing → register → play → return
+
+Recommend the best free analytics tools. Provide a comparison table. Explain how to use data to increase ad revenue over time.
+
+---
+
+**SECTION 12 — PERFORMANCE ENGINEERING**
+
+Ad revenue is directly tied to page speed. Cover:
+- LCP, INP, TTFB, CLS targets
+- Game loading optimization
+- Asset optimization (images, fonts, JS)
+- CDN caching strategy
+- Lazy loading games
+- API response time targets
+- How page speed affects AdSense approval and RPM
+
+Provide a performance budget for every metric.
+
+---
+
+**SECTION 13 — RISK ASSESSMENT**
+
+Top 10 risks for a monetized solo game platform. For each:
+- Risk description
+- Probability (High / Medium / Low)
+- Impact (High / Medium / Low)
+- Mitigation
+- Early warning signs
+
+Specific risks to include: AdSense rejection, low RPM for Philippine traffic, copyright issues with AI-generated games, free tier service shutdowns, traffic never growing past 100 users.
+
+---
+
+**SECTION 14 — PHASED ROADMAP**
+
+Realistic roadmap optimized for: fastest path to first ad revenue, portfolio value, low maintenance.
+
+Phase 1 — Foundation (Weeks 1–2): core setup, GitHub pipeline, deployment
+Phase 2 — Core Features (Weeks 3–5): auth, game lobby, basic wallet
+Phase 3 — Game Integration and Ads (Weeks 6–8): embed games, integrate AdSense
+Phase 4 — Growth and Polish (Weeks 9–12): SEO, analytics, retention features
+
+For each phase:
+- Goals
+- Deliverables
+- Technical tasks
+- Revenue milestone
+- Done checklist before moving to next phase
+
+---
+
+**SECTION 15 — FREE TOOLS ARSENAL**
+
+Every free tool needed:
+- Code editor and extensions
+- Design and wireframing
+- API testing
+- Database management
+- Version control (GitHub setup)
+- CI/CD via GitHub Actions
+- AI tools for generating HTML5 games
+- Free game assets (icons, sounds, sprites)
+- Monitoring and error tracking
+- SEO tools
+- Ad network dashboards
+- Documentation tools
+
+---
+
+**SECTION 16 — BRUTAL FEASIBILITY REVIEW**
+
+Answer honestly:
+- Can one developer realistically build this and make money?
+- What is the minimum version that can get AdSense approved?
+- What features are unnecessary for revenue?
+- What is the fastest route to first ₱1,000 in ad revenue?
+- What would you personally build first?
+- What is the biggest mistake solo game platform developers make?
+
+**Final Verdict:**
+- GO
+- GO WITH CHANGES
+- NOT RECOMMENDED
+
+With full justification and a one-paragraph action plan if GO.
+
+---

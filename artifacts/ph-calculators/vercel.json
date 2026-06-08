@@ -1,0 +1,13 @@
+{
+  "buildCommand": "cd ../.. && pnpm --filter @workspace/ph-calculators run build",
+  "outputDirectory": "artifacts/ph-calculators/dist/public",
+  "installCommand": "npm install -g pnpm && pnpm install --frozen-lockfile",
+  "env": {
+    "BASE_PATH": "/",
+    "PORT": "3000",
+    "NODE_ENV": "production"
+  },
+  "rewrites": [
+    { "source": "/((?!.*\\.).*)", "destination": "/index.html" }
+  ]
+}
